@@ -1,8 +1,7 @@
-﻿@*@{
-    ViewBag.Title = "Home Page";
-}*@
+﻿
+@model List<MTAWEB.Models.ENTITY.NEWS>
 
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 -->
 <html lang="">
@@ -139,86 +138,20 @@
                         <h4>Tin tức mới</h4>
                         <marquee width="480px" height="360px" direction="up">
                             <ul>
+                               @for (var i = 0; i < Model.Count; i++)
+                               {
+                                   var item = Model.ElementAt(i);
                                 <li>
                                     <article>
                                         <header>
                                             <address>
-                                                <a href="#">Tên tin tức</a>
+                                                <a href="#">@item.name</a>
                                             </address>
                                             @*    <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
                                         </header>
                                     </article>
                                 </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @*   <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @*   <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @* <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @*    <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @* <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article>
-                                        <header>
-                                            <address>
-                                                <a href="#">Tên tin tức</a>
-                                            </address>
-                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
-                                        </header>
-                                    </article>
-                                </li>
+                               }
                             </ul>
                         </marquee>
                     </div>
