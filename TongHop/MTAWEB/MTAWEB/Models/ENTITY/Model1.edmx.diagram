@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f61a768ef7e74c829d588f3a42c6c920" Name="Diagram1">
+        <EntityTypeShape EntityType="MTAWEBModel.ADMIN" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTAWEBModel.CATEGOTY" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTAWEBModel.NEWS" Width="1.5" PointX="7.5" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTAWEBModel.PICTURE" Width="1.5" PointX="9.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTAWEBModel.SUBCATEGOTY" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MTAWEBModel.UNITCATEGOTY" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="MTAWEBModel.FK__NEWS__nguoidang__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="MTAWEBModel.FK__SUBCATEGO__idCat__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="MTAWEBModel.FK__NEWS__idSubCateg__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="MTAWEBModel.FK__NEWS__idUnitCate__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="MTAWEBModel.FK__PICTURE__idNews__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="MTAWEBModel.FK__UNITCATEG__idSub__173876EA" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

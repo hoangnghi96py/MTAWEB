@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MTAWEBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="username" Type="nchar" MaxLength="15" />
+    <Property Name="deparment" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nchar" MaxLength="15" />
+    <Property Name="active" Type="bit" />
+  </EntityType>
+  <EntityType Name="CATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="lever" Type="int" />
+  </EntityType>
+  <EntityType Name="NEWS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="picture" Type="nvarchar" MaxLength="250" />
+    <Property Name="content" Type="ntext" />
+    <Property Name="detail" Type="ntext" />
+    <Property Name="avtive" Type="bit" />
+    <Property Name="dateup" Type="date" />
+    <Property Name="tacgia" Type="nvarchar" MaxLength="250" />
+    <Property Name="nguoidang" Type="int" />
+    <Property Name="idSubCategory" Type="int" />
+    <Property Name="idUnitCategory" Type="int" />
+  </EntityType>
+  <EntityType Name="PICTURE">
+    <Key>
+      <PropertyRef Name="idPicture" />
+    </Key>
+    <Property Name="idPicture" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="linkPicture" Type="nchar" MaxLength="250" />
+    <Property Name="idNews" Type="int" />
+  </EntityType>
+  <EntityType Name="SUBCATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="lever" Type="int" />
+    <Property Name="idCategory" Type="int" />
+  </EntityType>
+  <EntityType Name="UNITCATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="250" />
+    <Property Name="lever" Type="int" />
+    <Property Name="idSubCategory" Type="int" />
+  </EntityType>
+  <Association Name="FK__NEWS__idSubCateg__1B0907CE">
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="idSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NEWS__idUnitCate__1BFD2C07">
+    <End Role="UNITCATEGOTY" Type="Self.UNITCATEGOTY" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNITCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="idUnitCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NEWS__nguoidang__1A14E395">
+    <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMIN">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="nguoidang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PICTURE__idNews__1ED998B2">
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="0..1" />
+    <End Role="PICTURE" Type="Self.PICTURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NEWS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PICTURE">
+        <PropertyRef Name="idNews" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SUBCATEGO__idCat__145C0A3F">
+    <End Role="CATEGOTY" Type="Self.CATEGOTY" Multiplicity="0..1" />
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SUBCATEGOTY">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UNITCATEG__idSub__173876EA">
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="0..1" />
+    <End Role="UNITCATEGOTY" Type="Self.UNITCATEGOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UNITCATEGOTY">
+        <PropertyRef Name="idSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MTAWEBModelStoreContainer">
+    <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGOTY" EntityType="Self.CATEGOTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NEWS" EntityType="Self.NEWS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PICTURE" EntityType="Self.PICTURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBCATEGOTY" EntityType="Self.SUBCATEGOTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UNITCATEGOTY" EntityType="Self.UNITCATEGOTY" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__NEWS__idSubCateg__1B0907CE" Association="Self.FK__NEWS__idSubCateg__1B0907CE">
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTY" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NEWS__idUnitCate__1BFD2C07" Association="Self.FK__NEWS__idUnitCate__1BFD2C07">
+      <End Role="UNITCATEGOTY" EntitySet="UNITCATEGOTY" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NEWS__nguoidang__1A14E395" Association="Self.FK__NEWS__nguoidang__1A14E395">
+      <End Role="ADMIN" EntitySet="ADMIN" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PICTURE__idNews__1ED998B2" Association="Self.FK__PICTURE__idNews__1ED998B2">
+      <End Role="NEWS" EntitySet="NEWS" />
+      <End Role="PICTURE" EntitySet="PICTURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SUBCATEGO__idCat__145C0A3F" Association="Self.FK__SUBCATEGO__idCat__145C0A3F">
+      <End Role="CATEGOTY" EntitySet="CATEGOTY" />
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UNITCATEG__idSub__173876EA" Association="Self.FK__UNITCATEG__idSub__173876EA">
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTY" />
+      <End Role="UNITCATEGOTY" EntitySet="UNITCATEGOTY" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

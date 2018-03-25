@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MTAWEBModelStoreContainer" CdmEntityContainer="MTAWEBEntities">
+    <EntitySetMapping Name="ADMINs">
+      <EntityTypeMapping TypeName="MTAWEBModel.ADMIN">
+        <MappingFragment StoreEntitySet="ADMIN">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="deparment" ColumnName="deparment" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGOTies">
+      <EntityTypeMapping TypeName="MTAWEBModel.CATEGOTY">
+        <MappingFragment StoreEntitySet="CATEGOTY">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lever" ColumnName="lever" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NEWS">
+      <EntityTypeMapping TypeName="MTAWEBModel.NEWS">
+        <MappingFragment StoreEntitySet="NEWS">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="content" ColumnName="content" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="avtive" ColumnName="avtive" />
+          <ScalarProperty Name="dateup" ColumnName="dateup" />
+          <ScalarProperty Name="tacgia" ColumnName="tacgia" />
+          <ScalarProperty Name="nguoidang" ColumnName="nguoidang" />
+          <ScalarProperty Name="idSubCategory" ColumnName="idSubCategory" />
+          <ScalarProperty Name="idUnitCategory" ColumnName="idUnitCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PICTUREs">
+      <EntityTypeMapping TypeName="MTAWEBModel.PICTURE">
+        <MappingFragment StoreEntitySet="PICTURE">
+          <ScalarProperty Name="idPicture" ColumnName="idPicture" />
+          <ScalarProperty Name="linkPicture" ColumnName="linkPicture" />
+          <ScalarProperty Name="idNews" ColumnName="idNews" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCATEGOTies">
+      <EntityTypeMapping TypeName="MTAWEBModel.SUBCATEGOTY">
+        <MappingFragment StoreEntitySet="SUBCATEGOTY">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lever" ColumnName="lever" />
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNITCATEGOTies">
+      <EntityTypeMapping TypeName="MTAWEBModel.UNITCATEGOTY">
+        <MappingFragment StoreEntitySet="UNITCATEGOTY">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lever" ColumnName="lever" />
+          <ScalarProperty Name="idSubCategory" ColumnName="idSubCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
