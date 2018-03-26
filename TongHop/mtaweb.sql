@@ -60,49 +60,63 @@ INSERT dbo.NEWS
           name ,
           picture ,
           content ,
-          detail ,
-          avtive ,
-          dateup ,
-          tacgia ,
-          nguoidang ,
-          idSubCategory ,
-          idUnitCategory
+          detail 
+          
         )
 VALUES  ( 
           N'Thong bao 1' , -- name - nvarchar(250)
           N'' , -- picture - nvarchar(250)
           'Day la thong bao 1' , -- content - ntext
-          'Day la chi tiet thong bao 1' , -- detail - ntext
-          NULL , -- avtive - bit
-          GETDATE() , -- dateup - date
-          N'' , -- tacgia - nvarchar(250)
-          0 , -- nguoidang - int
-          0 , -- idSubCategory - int
-          0  -- idUnitCategory - int
-        )
+          'Day la chi tiet thong bao 1'  -- detail - ntext
+        
+        ),
 		( 
           N'Thong bao 2' , -- name - nvarchar(250)
           N'' , -- picture - nvarchar(250)
           'Day la thong bao 2' , -- content - ntext
-          'Day la chi tiet thong bao 2' , -- detail - ntext
-          NULL , -- avtive - bit
-          GETDATE() , -- dateup - date
-          N'' , -- tacgia - nvarchar(250)
-          0 , -- nguoidang - int
-          0 , -- idSubCategory - int
-          0  -- idUnitCategory - int
-        )
+          'Day la chi tiet thong bao 2'  -- detail - ntext
+          
+        ),
 		( 
           N'Thong bao 3' , -- name - nvarchar(250)
           N'' , -- picture - nvarchar(250)
           'Day la thong bao 3' , -- content - ntext
-          'Day la chi tiet thong bao 3' , -- detail - ntext
-          NULL , -- avtive - bit
-          GETDATE() , -- dateup - date
-          N'' , -- tacgia - nvarchar(250)
-          0 , -- nguoidang - int
-          0 , -- idSubCategory - int
-          0  -- idUnitCategory - int
+          'Day la chi tiet thong bao 3'  -- detail - ntext
+          
         )
+-- INSERT CATELORY
+
+INSERT dbo.CATEGOTY
+        ( name, lever )
+VALUES  ( N'GIỚI THIỆU',  1  ),
+( N'TIN TỨC',  1  ),
+( N'ĐÀO TẠO',  1  ),
+( N'TUYỂN SINH',  1  ),
+( N'SINH VIÊN',  1  ),
+( N'NGHIÊN CỨU',  1  ),
+( N'HỢP TÁC',1)
+
+-- insert subcategory Giới thiệu
+INSERT dbo.SUBCATEGOTY
+        ( name, lever, idCategory )
+VALUES  ( N'Giới thiệu', 0, 1   ),
+( N'Ban Giám Đốc', 0, 1   ),
+( N'Khối Cơ Quan Chức Năng', 0, 1   ),
+( N'Khoa', 0, 1   ),
+( N'Viện', 0, 1   )
+
+-- insert Tin Tuc
+INSERT dbo.SUBCATEGOTY
+        ( name, lever, idCategory )
+VALUES  ( N'',0, 2  ),
 
 
+-- insert Dao Tao
+INSERT dbo.SUBCATEGOTY
+        ( name, lever, idCategory )
+VALUES  ( N'Giới Thiệu',0, 3  ),
+ ( N'Chương Trình',0, 3  ),
+  ( N'Tin đào tạo',0, 3  ),
+   ( N'Đào tạo sau đại học',0, 3  ),
+    ( N'Cam kết đầu ra',0, 3  ),
+	 ( N'Sổ tay sinh viên',0, 3  )
