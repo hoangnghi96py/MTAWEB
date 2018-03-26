@@ -1,0 +1,91 @@
+﻿@using WebShop1.Areas.Admin.Models.Entites
+
+    @{ 
+        var ls = (List<Category>)ViewBag.listcat;
+        var ls1 = (List<Trademark>)ViewBag.listcat1;
+    }
+<form action="Add" method="post" enctype="multipart/form-data">
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Add Product</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nhập tên hàng" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="transport">Transport</label>
+                        <input type="text" class="form-control" id="transport" placeholder="Nhập giá" name="transport">
+                    </div>
+                    <div class="form-group">
+                        <label for="oldprice">oldprice</label>
+                        <input type="text" class="form-control" id="oldprice" placeholder="Nhập giá" name="oldprice">
+                    </div>
+                    <div class="form-group">
+                        <label for="oldprice">newprice</label>
+                        <input type="text" class="form-control" id="newprice" placeholder="Nhập giá" name="newprice">
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Number</label>
+                        <input type="number" class="form-control" id="number" placeholder="" name="number">
+                    </div>
+
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Levelsong">Levelsong</label>
+                        <input type="text" class="form-control" id="Levelsong" placeholder="Nhập Độ Hót" name="Levelsong">
+                    </div>
+                    <div class="form-group">
+                        <label for="Unit">Unit</label>
+                        <input type="number" class="form-control" id="Unit" placeholder="Nhập Số Lượng" name="Unit">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select class="form-control" name="idcategories" id="idcategories">
+                            @foreach (var item in ls)
+                            {
+                                <option value="@item.idcategories">@item.name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Trademark</label>
+                        <select class="form-control" name="idtrademark" id="idtrademark">
+                            @foreach (var item in ls1)
+                            {
+                                <option value="@item.idtrademark">@item.name</option>
+                            }
+                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="photo">File input</label>
+                        <input type="file" id="photo" name="photo">
+
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <input type="submit" class="btn btn-primary" value="Add">
+            </div>
+        </div>
+    </div>
+</form>

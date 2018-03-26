@@ -1,0 +1,49 @@
+﻿@using WebShop1.Areas.Admin.Models.Entites;
+@using WebShop1.Models.Bean;
+@{
+
+    ShoppingCart cart = (ShoppingCart)Session["cart"];
+    List<ItemCart> ListItem = new List<ItemCart>();
+    var quantity = 0;
+    var Total = 0;
+    if (cart != null)
+    {
+        quantity = cart.getQuantity();
+
+        Total = (int)cart.getTotal();   
+        ListItem = cart.ListItem;
+    }
+    <h1>
+        So Luong: @quantity
+    </h1>
+
+    <h1> Tong tien: @Total</h1>
+
+
+    <table border="1">
+        <tr>
+            <td>Ten</td>
+            <td>Gia</td>
+            <td>SL</td>
+            <td>Thanh TIen</td>`W   
+            <td>Chuc nang</td>
+        </tr>
+        @foreach (var item in ListItem)
+        {
+            <tr>
+                <td>@item.name</td>
+
+                <td>@item.price</td>
+                <td>@item.quantity</td>
+                <td>@item.getMoney()</td>
+
+                <td><a href="/ShoppingCart/Add/@item.id">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <form action="Buy" method="post">
+        Phone Number: <input type="text" name="phone"/>
+        Ten Nguoi Nhan : <input type="text" name="name" />
+        <input type="submit" value="Mua Hang"/>
+    </form>
+}
