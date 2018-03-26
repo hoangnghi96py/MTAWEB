@@ -11,9 +11,7 @@ namespace MTAWEB.Models.DAO
         DatabaseModel model = new DatabaseModel();
         public List<NEWS> getListNews()
         {
-
             return model.NEWS.ToList();
-
         }
     }
 }

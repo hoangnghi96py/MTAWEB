@@ -11,12 +11,10 @@ namespace MTAWEB.Controllers
     {
         public ActionResult Index()
         {
-            newsDAO dao = new newsDAO();
-            return View(dao.getListNews());
+            newsDAO newDao = new newsDAO();
+            ViewBag.lisNew = newDao.getListNews();
+            return View();
         }
-
-   
-
 
     }
 }
