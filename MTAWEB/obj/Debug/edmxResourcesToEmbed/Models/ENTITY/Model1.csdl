@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MTAWEBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="username" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="deparment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <Property Name="active" Type="Boolean" />
+    <NavigationProperty Name="NEWS" Relationship="Self.FK__NEWS__nguoidang__1A14E395" FromRole="ADMIN" ToRole="NEWS" />
+  </EntityType>
+  <EntityType Name="CATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="lever" Type="Int32" />
+    <NavigationProperty Name="SUBCATEGOTies" Relationship="Self.FK__SUBCATEGO__idCat__145C0A3F" FromRole="CATEGOTY" ToRole="SUBCATEGOTY" />
+  </EntityType>
+  <EntityType Name="NEWS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="picture" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="avtive" Type="Boolean" />
+    <Property Name="dateup" Type="DateTime" Precision="0" />
+    <Property Name="tacgia" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="nguoidang" Type="Int32" />
+    <Property Name="idSubCategory" Type="Int32" />
+    <Property Name="idUnitCategory" Type="Int32" />
+    <NavigationProperty Name="ADMIN" Relationship="Self.FK__NEWS__nguoidang__1A14E395" FromRole="NEWS" ToRole="ADMIN" />
+    <NavigationProperty Name="SUBCATEGOTY" Relationship="Self.FK__NEWS__idSubCateg__1B0907CE" FromRole="NEWS" ToRole="SUBCATEGOTY" />
+    <NavigationProperty Name="UNITCATEGOTY" Relationship="Self.FK__NEWS__idUnitCate__1BFD2C07" FromRole="NEWS" ToRole="UNITCATEGOTY" />
+    <NavigationProperty Name="PICTUREs" Relationship="Self.FK__PICTURE__idNews__1ED998B2" FromRole="NEWS" ToRole="PICTURE" />
+  </EntityType>
+  <EntityType Name="PICTURE">
+    <Key>
+      <PropertyRef Name="idPicture" />
+    </Key>
+    <Property Name="idPicture" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="linkPicture" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="idNews" Type="Int32" />
+    <NavigationProperty Name="NEWS" Relationship="Self.FK__PICTURE__idNews__1ED998B2" FromRole="PICTURE" ToRole="NEWS" />
+  </EntityType>
+  <EntityType Name="SUBCATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="lever" Type="Int32" />
+    <Property Name="idCategory" Type="Int32" />
+    <NavigationProperty Name="CATEGOTY" Relationship="Self.FK__SUBCATEGO__idCat__145C0A3F" FromRole="SUBCATEGOTY" ToRole="CATEGOTY" />
+    <NavigationProperty Name="NEWS" Relationship="Self.FK__NEWS__idSubCateg__1B0907CE" FromRole="SUBCATEGOTY" ToRole="NEWS" />
+    <NavigationProperty Name="UNITCATEGOTies" Relationship="Self.FK__UNITCATEG__idSub__173876EA" FromRole="SUBCATEGOTY" ToRole="UNITCATEGOTY" />
+  </EntityType>
+  <EntityType Name="UNITCATEGOTY">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="lever" Type="Int32" />
+    <Property Name="idSubCategory" Type="Int32" />
+    <NavigationProperty Name="NEWS" Relationship="Self.FK__NEWS__idUnitCate__1BFD2C07" FromRole="UNITCATEGOTY" ToRole="NEWS" />
+    <NavigationProperty Name="SUBCATEGOTY" Relationship="Self.FK__UNITCATEG__idSub__173876EA" FromRole="UNITCATEGOTY" ToRole="SUBCATEGOTY" />
+  </EntityType>
+  <Association Name="FK__NEWS__nguoidang__1A14E395">
+    <End Role="ADMIN" Type="Self.ADMIN" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMIN">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="nguoidang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SUBCATEGO__idCat__145C0A3F">
+    <End Role="CATEGOTY" Type="Self.CATEGOTY" Multiplicity="0..1" />
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SUBCATEGOTY">
+        <PropertyRef Name="idCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NEWS__idSubCateg__1B0907CE">
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="idSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NEWS__idUnitCate__1BFD2C07">
+    <End Role="UNITCATEGOTY" Type="Self.UNITCATEGOTY" Multiplicity="0..1" />
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNITCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="NEWS">
+        <PropertyRef Name="idUnitCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PICTURE__idNews__1ED998B2">
+    <End Role="NEWS" Type="Self.NEWS" Multiplicity="0..1" />
+    <End Role="PICTURE" Type="Self.PICTURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NEWS">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PICTURE">
+        <PropertyRef Name="idNews" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UNITCATEG__idSub__173876EA">
+    <End Role="SUBCATEGOTY" Type="Self.SUBCATEGOTY" Multiplicity="0..1" />
+    <End Role="UNITCATEGOTY" Type="Self.UNITCATEGOTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCATEGOTY">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UNITCATEGOTY">
+        <PropertyRef Name="idSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MTAWEBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADMINs" EntityType="Self.ADMIN" />
+    <EntitySet Name="CATEGOTies" EntityType="Self.CATEGOTY" />
+    <EntitySet Name="NEWS" EntityType="Self.NEWS" />
+    <EntitySet Name="PICTUREs" EntityType="Self.PICTURE" />
+    <EntitySet Name="SUBCATEGOTies" EntityType="Self.SUBCATEGOTY" />
+    <EntitySet Name="UNITCATEGOTies" EntityType="Self.UNITCATEGOTY" />
+    <AssociationSet Name="FK__NEWS__nguoidang__1A14E395" Association="Self.FK__NEWS__nguoidang__1A14E395">
+      <End Role="ADMIN" EntitySet="ADMINs" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SUBCATEGO__idCat__145C0A3F" Association="Self.FK__SUBCATEGO__idCat__145C0A3F">
+      <End Role="CATEGOTY" EntitySet="CATEGOTies" />
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTies" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NEWS__idSubCateg__1B0907CE" Association="Self.FK__NEWS__idSubCateg__1B0907CE">
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTies" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NEWS__idUnitCate__1BFD2C07" Association="Self.FK__NEWS__idUnitCate__1BFD2C07">
+      <End Role="UNITCATEGOTY" EntitySet="UNITCATEGOTies" />
+      <End Role="NEWS" EntitySet="NEWS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PICTURE__idNews__1ED998B2" Association="Self.FK__PICTURE__idNews__1ED998B2">
+      <End Role="NEWS" EntitySet="NEWS" />
+      <End Role="PICTURE" EntitySet="PICTUREs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UNITCATEG__idSub__173876EA" Association="Self.FK__UNITCATEG__idSub__173876EA">
+      <End Role="SUBCATEGOTY" EntitySet="SUBCATEGOTies" />
+      <End Role="UNITCATEGOTY" EntitySet="UNITCATEGOTies" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

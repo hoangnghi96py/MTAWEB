@@ -1,0 +1,279 @@
+﻿@*@model List<MTAWEB.Models.ENTITY.NEWS>*@
+@using MTAWEB.Models.ENTITY
+@{
+    List<NEWS> lsNew = (List<NEWS>)ViewBag.lisNew;
+}
+@{
+    ViewBag.Title = "Index_1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- Slideshow container -->
+    <div class="wrapper bgded overlay" style="background-image:url("~/Content/image/backgrounds/01.png");">
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1</div>
+                <img src="~/Content/image/Slide/1.png" style="width:100%">
+                <div class="text">Thông tin</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2</div>
+                <img src="~/Content/image/Slide/2.png" style="width:100%">
+                <div class="text">Thông tin</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3</div>
+                <img src="~/Content/image/Slide/3.png" style="width:100%">
+                <div class="text">Thông tin</div>
+            </div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <article class="group">
+                <div class="group btmspace-50 demo">
+                    <div class="one_half first" style="border: 10px solid #0069A8; border-radius: 10px;padding: 5px">
+                        <h4>Tin tức mới</h4>
+                        <marquee width="480px" height="360px" direction="up">
+                            <ul>
+                                @for (var i = 0; i < lsNew.Count; i++)
+                                {
+                                    var item = lsNew[i];
+                                    <li>
+                                        <article>
+                                            <header>
+                                                <address>
+                                                    <a href="#">@item.name</a>
+                                                </address>
+                                                @*    <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                            </header>
+                                        </article>
+                                    </li>
+                                }
+                            </ul>
+                        </marquee>
+                    </div>
+                    <div class="one_half" style="border: 10px solid #0069A8 ;border-radius: 10px;padding: 5px">
+                        <h4>Thông báo</h4>
+                        <marquee width="480px" height="360px" direction="up">
+                            <ul>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*<time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*   <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article>
+                                        <header>
+                                            <address>
+                                                <a href="#">Tên thông báo</a>
+                                            </address>
+                                            @*  <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>*@
+                                        </header>
+                                    </article>
+                                </li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+                <div class="group btmspace-80">
+                    <div class="one_quarter first">
+                        <p class="font-xs">Học viện kỹ thuật quân sự</p>
+                        <h6 class="heading">Giới thiệu chung</h6>
+                    </div>
+                    <div class="three_quarter">
+                        <p>Học viện Kỹ thuật Quân sự được thành lập theo Quyết định số 146/CP ngày 08/8/1966 của Hội đồng Chính phủ với tên gọi ban đầu là “Phân hiệu II Đại học Bách khoa”. </p>
+                        <p class="btmspace-30">Ngày 28/10/1966, tại Hội trường lớn Đại học Bách khoa, Bộ Đại học và Trung học chuyên nghiệp (nay là Bộ Giáo dục và Đào tạo) và Bộ Quốc phòng long trọng tổ chức Lễ thành lập Phân hiệu II Đại học Bách khoa, đồng thời khai giảng khoá đào tạo đầu tiên. Từ đó, ngày 28/10/1966 được chọn là Ngày truyền thống của Học viện Kỹ thuật Quân sự.&hellip;</p>
+                        <footer><a class="btn" href="pages/Gioithieu.html">Đọc thêm &raquo;</a></footer>
+                    </div>
+                </div>
+                <figure>
+                    <h6 class="heading">Một số hình ảnh tiêu biểu</h6>
+                    <ul class="nospace group overview">
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                        <li class="one_half"><a href="#"><img src="~/Content/image/480x360.png" alt=""></a></li>
+                    </ul>
+                </figure>
+            </article>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+        </main>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper bgded overlay" style="background-image:url("~/Content/image/backgrounds/02.png");">
+        <article class="hoc container clear center">
+            <!-- ################################################################################################ -->
+            <div class="sectiontitle" style="margin-bottom:30px;">
+                <h6 class="heading">Bài báo tiêu biểu</h6>
+                <p>Nội dung</p>
+            </div>
+            <p><a class="btn medium" href="#">Đọc tiếp &raquo;</a></p>
+            <!-- ################################################################################################ -->
+        </article>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <section class="hoc container clear">
+            <!-- ################################################################################################ -->
+            <div class="sectiontitle">
+                <h6 class="heading">Tin Tức mới</h6>
+                <p>Thông tin cập nhật</p>
+            </div>
+            <div class="group">
+                @for(int i=0;i<lsNew.Count;i=i+3)
+                {
+                     
+                    @*<article class="one_third first">
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i].picture" alt=""></a>
+                        <h6 class="nospace heading">@lsNew[i].name</h6>
+                        <ul class="nospace meta">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
+                        <p>@lsNew[i].content&hellip;</p>
+                        <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
+                    </article>*@
+
+
+                    <article class="one_third first">
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i].picture" alt=""></a>
+                        <h6 class="nospace heading">@lsNew[i].name</h6>
+                        <ul class="nospace meta">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
+                        <p>@lsNew[i].content&hellip;</p>
+                        <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
+                    </article>
+                    <article class="one_third">
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i+1].picture" alt=""></a>
+                        <h6 class="nospace heading">@lsNew[i+1].name</h6>
+                        <ul class="nospace meta">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
+                        <p>@lsNew[i+1].content&hellip;</p>
+                        <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
+                    </article>
+                    <article class="one_third">
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i+2].picture"alt=""></a>
+                        <h6 class="nospace heading">@lsNew[i + 2].name</h6>
+                        <ul class="nospace meta">
+                            <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
+                            <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
+                        </ul>
+                        <p>@lsNew[i + 2].content&hellip;</p>
+                        <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
+                    </article>
+                }
+            </div>
+            <!-- ################################################################################################ -->
+        </section>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper bgded overlay light" style="background-image:url("~/Content/image/backgrounds/03.png")>
+        <article class="hoc cta clear">
+            <!-- ################################################################################################ -->
+            <h6 class="three_quarter first">Trang sinh viên đăng ký tín chỉ</h6>
+            <footer class="one_quarter"><a class="btn" href="#">Chuyển hướng &raquo;</a></footer>
+            <!-- ################################################################################################ -->
+        </article>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+   
