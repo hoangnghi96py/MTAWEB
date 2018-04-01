@@ -194,18 +194,18 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DaoTaoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DAO\CategoryDAO.cs" />
     <Compile Include="Models\DAO\newsDAO.cs" />
+    <Compile Include="Models\DAO\SubCategoryDAO.cs" />
+    <Compile Include="Models\DAO\UnitCategoryDAO.cs" />
     <Compile Include="Models\ENTITY\ADMIN.cs" />
     <Compile Include="Models\ENTITY\CATEGOTY.cs" />
     <Compile Include="Models\ENTITY\DatabaseModel.cs" />
@@ -213,8 +213,6 @@
     <Compile Include="Models\ENTITY\PICTURE.cs" />
     <Compile Include="Models\ENTITY\SUBCATEGOTY.cs" />
     <Compile Include="Models\ENTITY\UNITCATEGOTY.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -225,10 +223,18 @@
     <Content Include="Content\framework.css" />
     <Content Include="Content\image\320x240.png" />
     <Content Include="Content\image\480x360.png" />
+    <Content Include="Content\image\backgrounds\01.png" />
+    <Content Include="Content\image\backgrounds\02.png" />
+    <Content Include="Content\image\backgrounds\03.png" />
+    <Content Include="Content\image\gallery\01.png" />
     <Content Include="Content\image\imgl.gif" />
     <Content Include="Content\image\imgr.gif" />
     <Content Include="Content\image\index.html" />
     <Content Include="Content\image\logo.png" />
+    <Content Include="Content\image\openday.jpg" />
+    <Content Include="Content\image\Slide\1.png" />
+    <Content Include="Content\image\Slide\2.png" />
+    <Content Include="Content\image\Slide\3.png" />
     <Content Include="Content\image\Text-Box.png" />
     <Content Include="Content\layout.css" />
     <Content Include="favicon.ico" />
@@ -274,7 +280,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -289,23 +294,15 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\DaoTao\Index.cshtml" />
+    <Content Include="Views\Shared\_Layoutchitiettintuc.cshtml" />
+    <Content Include="Views\Home\Index_1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\admin\Controllers\" />
     <Folder Include="Areas\admin\Models\" />
     <Folder Include="Areas\admin\Views\Shared\" />
-    <Folder Include="Content\image\backgrounds\" />
-    <Folder Include="Content\image\gallery\" />
-    <Folder Include="Content\image\Slide\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
