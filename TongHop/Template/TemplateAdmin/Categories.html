@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://newsapp.neurondigital.com/categories -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://newsapp.neurondigital.com/images/favicon.ico">
+
+  <title>News App Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="./bootstrap/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/datatables.min.css">
+  <link href="./bootstrap/css/summernote.css" rel="stylesheet">
+  <link href="./bootstrap/css/modalmaker.css" rel="stylesheet">
+  <link href="./bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="./bootstrap/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="./bootstrap/css/bootstrap-iconpicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">News App Template
+                      
+              (Demo Mode)
+            
+                  </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, admin (Admin) <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./Settings.html">Settings</a></li>
+              <li><a href="./Sign in.html">Sign Out</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-xs-9 col-sm-3 col-md-2 sidebar row-offcanvas ">
+        <ul class="nav nav-sidebar">
+          <li><a href="./Dashboard.html">Dashboard</a></li>
+          <li><a href="./Articles.html">News Articles</a></li>
+                      
+              <li><a href="#">Categories</a></li>
+              <li><a href="./Information.html">Info</a></li>
+              
+                <li><a href="./User.html">Users</a></li>
+              
+            
+                    <li><a href="./Push Notifications.html">Push Notifications</a></li>
+          <li><a href="./Settings.html">Settings</a></li>
+          <li><a href="./Sign in.html">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">Categories</h1>
+
+<div class="row">
+    <div class="col-xs-2 col-sm-2">
+        <div class="form-group">
+            <a class="btn btn-success open-modal" data-id="-1"><i class="glyphicon glyphicon-plus"></i> New Catagory </a> 
+        </div>
+    </div>
+
+    <div class="col-xs-7 col-md-4 col-lg-4 pull-right">
+        <div class="input-group   pull-left margin-right">
+                  <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-align-justify"></i></span> <select class="form-control selectwidthauto " id="length-catagories-table">
+                    <option value="10">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                  </select>
+        </div>
+        <div class="input-group  ">
+            <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span> 
+            <input placeholder="Search" class="form-control" type="text" id="search-catagories">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12 col-md-12 col-lg-12">
+
+        <div class="table-responsive">
+            <div id="categories-table_wrapper" class="dataTables_wrapper no-footer"><div id="categories-table_processing" class="dataTables_processing" style="display: none;">Processing...</div><table class="table table-striped dataTable no-footer" id="categories-table" role="grid">
+              <thead>
+                <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="categories-table" rowspan="1" colspan="1" aria-label="#: activate to sort column descending" aria-sort="ascending" style="width: 20px;">#</th><th class="sorting" tabindex="0" aria-controls="categories-table" rowspan="1" colspan="1" aria-label="Image: activate to sort column ascending" style="width: 130px;">Image</th><th class="sorting" tabindex="0" aria-controls="categories-table" rowspan="1" colspan="1" aria-label="Icon: activate to sort column ascending">Icon</th><th class="sorting" tabindex="0" aria-controls="categories-table" rowspan="1" colspan="1" aria-label="Name: activate to sort column ascending">Name</th><th class="sorting" tabindex="0" aria-controls="categories-table" rowspan="1" colspan="1" aria-label="Description: activate to sort column ascending">Description</th></tr>
+              </thead>
+            <tbody><tr class="open-modal odd" data-id="1" role="row"><td class="sorting_1">1</td><td><img width="120px" height="60px" src="./image/149682315512.jpg"></td><td><i class="fa fa-fighter-jet"></i></td><td>Tech</td><td></td></tr><tr class="open-modal even" data-id="2" role="row"><td class="sorting_1">2</td><td><img width="120px" height="60px" src="./image/149682328011.jpg"></td><td><i class="fa fa-bolt"></i></td><td>Sport</td><td></td></tr><tr class="open-modal odd" data-id="3" role="row"><td class="sorting_1">3</td><td><img width="120px" height="60px" src="./image/149682374613.jpg"></td><td><i class="fa fa-magic"></i></td><td>Beauty</td><td></td></tr><tr class="open-modal even" data-id="4" role="row"><td class="sorting_1">4</td><td><img width="120px" height="60px" src="./image/149682378510.jpg"></td><td><i class="fa fa-archive"></i></td><td>Business</td><td></td></tr><tr class="open-modal odd" data-id="5" role="row"><td class="sorting_1">5</td><td><img width="120px" height="60px" src="./image/14968238119.jpg"></td><td><i class="fa fa-globe"></i></td><td>World</td><td></td></tr><tr class="open-modal even" data-id="6" role="row"><td class="sorting_1">6</td><td><img width="120px" height="60px" src="./image/14968238318.jpg"></td><td><i class="fa fa-cutlery"></i></td><td>Food</td><td></td></tr></tbody></table><div class="dataTables_paginate paging_simple_numbers" id="categories-table_paginate"><a class="paginate_button previous disabled" aria-controls="categories-table" data-dt-idx="0" tabindex="0" id="categories-table_previous">Previous</a><span><a class="paginate_button current" aria-controls="categories-table" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="categories-table" data-dt-idx="2" tabindex="0" id="categories-table_next">Next</a></div></div>
+          </div>
+    </div>
+</div>
+
+
+<div id="modal-placeholder"><div class="modal fade" id="category-modal_name" tabindex="-1" role="dialog"> <form enctype="multipart/form-data" role="form" id="category-modal_nameform">  <div class="modal-dialog" role="document">    <div class="modal-content">      <div class="modal-header">        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>        <h4 class="modal-title" id="myModalLabel">Edit Category</h4>      </div>      <div class="modal-body">          <input type="hidden" name="id" value="-1"><div class="form-group "><label for="name">Category Name</label><input type="text" name="name" class="form-control" id="name" placeholder="eg: Tech" value=""></div><div class="form-group ">    <label for="image">Category Image</label>    <div class="input-group images-preview"></div>    <div class="input-group image-preview" data-original-title="" title="">        <input type="text" id="imagesimage" name="image" class="form-control image-preview-filename" disabled="disabled">        <span class="input-group-btn">            <!-- image-preview-clear button -->            <button type="button" class="btn btn-default image-preview-clear" style="display:none;"><span class="glyphicon glyphicon-remove"></span> Clear</button>            <!-- image-preview-input -->            <div class="btn btn-default image-preview-input">                <span class="glyphicon glyphicon-folder-open"></span>                <span class="image-preview-input-title">Browse</span>                <input type="file" accept="image/png, image/jpeg, image/gif" name="imagefile[]">            </div>        </span>    </div></div><div class="form-group"><label for="iconpickericon">Category Icon</label><button id="iconpickericon" class="form-control btn iconpicker btn-default" name="icon" data-iconset="fontawesome" data-icon="fa-cab"></button></div><div class="form-group">    <label for="description">Category Description</label>    <textarea rows="5" name="description" class="form-control" id="description" placeholder=""></textarea> </div>      </div>      <div class="modal-footer">        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>         <button type="button" id="category-modal_namedelete" class="btn btn-danger">Delete</button>        <button type="button" id="category-modal_namesave" class="btn btn-primary">Save changes</button>      </div>    </div>  </div> </form></div></div>
+          
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="./bootstrap/js/jquery.min.js.download"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+  </script>
+  <script src="./bootstrap/js/bootstrap.min.js.download"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="./bootstrap/js/ie10-viewport-bug-workaround.js.download"></script>
+  <script src="./bootstrap/js/script.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/datatables.min.js.download"></script>
+
+  <!-- summernote js-->
+  <script src="./bootstrap/js/summernote.js.download"></script>
+
+  <!-- Modalmaker js-->
+  <script src="./bootstrap/js/modalmaker.js.download"></script>
+  <script src="./bootstrap/js/sharemodal.js.download"></script>
+
+  <!--iconpicker-->
+  <script type="text/javascript" src="./bootstrap/js/iconset-fontawesome-4.0.0.min.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap-iconpicker.min.js.download"></script>
+
+  <!--Date Time picker-->
+  <script type="text/javascript" src="./bootstrap/js/moment.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/transition.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/collapse.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap-datetimepicker.min.js.download"></script>
+
+
+
+</body></html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://newsapp.neurondigital.com/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://newsapp.neurondigital.com/images/favicon.ico">
+
+  <title>News App Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="./bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="./bootstrap/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/datatables.min.css">
+  <link href="./bootstrap/css/summernote.css" rel="stylesheet">
+  <link href="./bootstrap/css/modalmaker.css" rel="stylesheet">
+  <link href="./bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="./bootstrap/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="./bootstrap/css/bootstrap-iconpicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">News App Template
+                      
+              (Demo Mode)
+            
+                  </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, admin (Admin) <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./Setting.html">Settings</a></li>
+              <li><a href="./Sign in.html">Sign Out</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-xs-9 col-sm-3 col-md-2 sidebar row-offcanvas ">
+        <ul class="nav nav-sidebar">
+          <li><a href="./Dashboard.html">Dashboard</a></li>
+          <li><a href="./Articles.html">News Articles</a></li>
+                      
+              <li><a href="./Categories.html">Categories</a></li>
+              <li><a href="./Information.html">Info</a></li>
+              
+                <li><a href="./User.html">Users</a></li>
+              
+            
+                    <li><a href="./Push Notifications.html">Push Notifications</a></li>
+          <li><a href="./Settings.html">Settings</a></li>
+          <li><a href="./Logout.html">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h1 class="page-header">Dashboard</h1>
+
+<div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+      
+        <h3 class="panel-title"><span class="glyphicon glyphicon-eye-open"></span>Top Viewed</h3>
+      </div>
+      <div class="panel-body">
+          <div class="table-responsive">
+            <div id="top-viewed-table_wrapper" class="dataTables_wrapper no-footer"><div id="top-viewed-table_processing" class="dataTables_processing" style="display: none;">Processing...</div><table class="table table-striped dataTable no-footer" id="top-viewed-table" role="grid">
+              <thead>
+                <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1">Article</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20px;">Views</th></tr>
+              </thead>
+            <tbody><tr role="row" class="odd"><td>This article will be published on the scheduled date</td><td>0</td></tr></tbody></table><div class="dataTables_paginate paging_simple_numbers" id="top-viewed-table_paginate"><a class="paginate_button previous disabled" aria-controls="top-viewed-table" data-dt-idx="0" tabindex="0" id="top-viewed-table_previous">Previous</a><span><a class="paginate_button current" aria-controls="top-viewed-table" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="top-viewed-table" data-dt-idx="2" tabindex="0" id="top-viewed-table_next">Next</a></div></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-share-alt"></span>Top Shared</h3>
+      </div>
+      <div class="panel-body">
+          <div class="table-responsive">
+            <div id="top-shared-table_wrapper" class="dataTables_wrapper no-footer"><div id="top-shared-table_processing" class="dataTables_processing" style="display: none;">Processing...</div><table class="table table-striped dataTable no-footer" id="top-shared-table" role="grid">
+              <thead>
+                <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1">Article</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 20px;">Shares</th></tr>
+              </thead>
+            <tbody><tr role="row" class="odd"><td>This article will be published on the scheduled date</td><td>0</td></tr></tbody></table><div class="dataTables_paginate paging_simple_numbers" id="top-shared-table_paginate"><a class="paginate_button previous disabled" aria-controls="top-shared-table" data-dt-idx="0" tabindex="0" id="top-shared-table_previous">Previous</a><span><a class="paginate_button current" aria-controls="top-shared-table" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="top-shared-table" data-dt-idx="2" tabindex="0" id="top-shared-table_next">Next</a></div></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-star"></span>Top Bookmarked</h3>
+      </div>
+      <div class="panel-body">
+          <div class="table-responsive">
+            <div id="top-favorited-table_wrapper" class="dataTables_wrapper no-footer"><div id="top-favorited-table_processing" class="dataTables_processing" style="display: none;">Processing...</div><table class="table table-striped dataTable no-footer" id="top-favorited-table" role="grid">
+              <thead>
+                <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1">Article</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 170px;">No. of Bookmarks</th></tr>
+              </thead>
+            <tbody><tr role="row" class="odd"><td>This article will be published on the scheduled date</td><td>0</td></tr></tbody></table><div class="dataTables_paginate paging_simple_numbers" id="top-favorited-table_paginate"><a class="paginate_button previous disabled" aria-controls="top-favorited-table" data-dt-idx="0" tabindex="0" id="top-favorited-table_previous">Previous</a><span><a class="paginate_button current" aria-controls="top-favorited-table" data-dt-idx="1" tabindex="0">1</a></span><a class="paginate_button next disabled" aria-controls="top-favorited-table" data-dt-idx="2" tabindex="0" id="top-favorited-table_next">Next</a></div></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="./bootstrap/js/jquery.min.js.download"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+  </script>
+  <script src="./bootstrap/js/bootstrap.min.js.download"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="./bootstrap/js/ie10-viewport-bug-workaround.js.download"></script>
+  <script src="./bootstrap/js/script.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/datatables.min.js.download"></script>
+
+  <!-- summernote js-->
+  <script src="./bootstrap/js/summernote.js.download"></script>
+
+  <!-- Modalmaker js-->
+  <script src="./bootstrap/js/modalmaker.js.download"></script>
+  <script src="./bootstrap/js/sharemodal.js.download"></script>
+
+  <!--iconpicker-->
+  <script type="text/javascript" src="./bootstrap/js/iconset-fontawesome-4.0.0.min.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap-iconpicker.min.js.download"></script>
+
+  <!--Date Time picker-->
+  <script type="text/javascript" src="./bootstrap/js/moment.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/transition.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/collapse.js.download"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap-datetimepicker.min.js.download"></script>
+
+
+
+</body></html>
