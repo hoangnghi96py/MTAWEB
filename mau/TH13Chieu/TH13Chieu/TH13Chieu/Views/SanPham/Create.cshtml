@@ -1,0 +1,72 @@
+﻿@using TH13Chieu.Models.Entities;
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model SanPham
+
+<div class="content">
+
+						<div class="module">
+							<div class="module-head">
+								<h3>Forms</h3>
+							</div>
+							<div class="module-body">
+
+									<form class="form-horizontal row-fluid" method="post" action="/SanPham/Create" enctype = "multipart/form-data">
+                                         @Html.ValidationSummary(true)
+										<div class="control-group">
+											<label class="control-label" for="basicinput">Mã sản phẩm </label>
+											<div class="controls">												
+											   @Html.TextBoxFor(model => model.MaSP, new { placeholder="Nhập mã sản phẩm", @class="span8" })
+                                               @Html.ValidationMessageFor(model => model.MaSP)
+											</div>
+										</div>
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Tên sản phẩm </label>
+											<div class="controls">												
+											   @Html.TextBoxFor(model => model.TenSP, new { placeholder="Nhập tên sản phẩm", @class="span8" })
+                                               @Html.ValidationMessageFor(model => model.TenSP)
+											</div>
+										</div>
+										
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Ảnh sản phẩm </label>
+											<div class="controls">												
+											   @Html.TextBoxFor(model => model.UrlAnh, new { type="file", placeholder="Nhập ảnh sản phẩm", @class="span8" })
+                                               @Html.ValidationMessageFor(model => model.UrlAnh)
+											</div>
+										</div>
+
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Giá sản phẩm </label>
+											<div class="controls">												
+											   @Html.TextBoxFor(model => model.GiaSP, new { placeholder="Nhập giá sản phẩm", @class="span8" })
+                                               @Html.ValidationMessageFor(model => model.GiaSP)
+											</div>
+										</div>
+										
+                                        <div class="control-group">
+											<label class="control-label" for="basicinput">Danh mục sản phẩm </label>
+											<div class="controls">												
+											 @Html.DropDownListFor(model => model.MaDM, null, new { @class = "span8" })
+                                             @Html.ValidationMessageFor(model => model.MaSP)
+											</div>
+										</div>
+
+										
+
+										<div class="control-group">
+											<div class="controls">
+												<button type="submit" class="btn">Thêm</button>
+											</div>
+										</div>
+									</form>
+							</div>
+						</div>
+
+						
+						
+					</div><!--

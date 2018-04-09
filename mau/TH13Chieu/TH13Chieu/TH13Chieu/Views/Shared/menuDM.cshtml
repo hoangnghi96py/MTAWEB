@@ -1,0 +1,9 @@
+﻿@using TH13Chieu.Models.Entities;
+@model IEnumerable<DanhMuc>
+ 
+               @foreach(DanhMuc item in Model){
+                   
+				      <li><a href="#">@item.TenDM</a></li>
+               }
+				      
+ 

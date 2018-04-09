@@ -1,0 +1,65 @@
+E:\Temp\TH13Chieu\TH13Chieu\bin\TH13Chieu.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\TH13Chieu.pdb
+E:\Temp\TH13Chieu\TH13Chieu\bin\Antlr3.Runtime.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\EntityFramework.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\Microsoft.Web.Infrastructure.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\Newtonsoft.Json.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Net.Http.Formatting.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Http.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Http.WebHost.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Mvc.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Optimization.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Providers.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Razor.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Deployment.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Razor.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\WebGrease.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\EntityFramework.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\Newtonsoft.Json.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Net.Http.Formatting.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Http.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Http.WebHost.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Mvc.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.Razor.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Deployment.xml
+E:\Temp\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Razor.xml
+E:\Temp\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.csprojResolveAssemblyReference.cache
+E:\Temp\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.dll
+E:\Temp\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.pdb
+E:\Temp\TH13Chieu\TH13Chieu\bin\EntityFramework.SqlServer.dll
+E:\Temp\TH13Chieu\TH13Chieu\bin\EntityFramework.SqlServer.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\TH13Chieu.dll.config
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\TH13Chieu.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\TH13Chieu.pdb
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\Antlr3.Runtime.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\EntityFramework.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\EntityFramework.SqlServer.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\Microsoft.Web.Infrastructure.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\Newtonsoft.Json.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Net.Http.Formatting.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Http.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Http.WebHost.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Mvc.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Optimization.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Providers.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Razor.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Deployment.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Razor.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\WebGrease.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\EntityFramework.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\EntityFramework.SqlServer.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\Newtonsoft.Json.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Net.Http.Formatting.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Http.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Http.WebHost.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Mvc.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.Razor.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Deployment.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\bin\System.Web.WebPages.Razor.xml
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.csprojResolveAssemblyReference.cache
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.dll
+D:\HOC TAP\hoc ki VI (ki 2 nam 3)\CNWeb\ViDU\TH13Chieu\TH13Chieu\TH13Chieu\obj\Debug\TH13Chieu.pdb
