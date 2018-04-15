@@ -6,6 +6,7 @@
     <title>@ViewBag.Title</title>
     <meta charset="utf-8" />
     <link href="~/Content/layout.css" rel="stylesheet" type="text/css" media="all">
+    <<link href="~/Content/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 <body id="top">
@@ -41,46 +42,14 @@
         <nav id="mainav" class="hoc clear">
             <!-- ################################################################################################ -->
             <ul class="clear">
-                <li class="active">@Html.ActionLink("Trang chu", "Index", "Home")</li>
-                <li>
-                    <a class="drop" href="pages/Gioithieu.html">Giới thiệu</a>
-                    <ul>
-                        <li><a href="pages/Gioithieu.html">Giới thiệu chung</a></li>
-                        <li><a href="pages/Thuvienanh.html">Thư viện ảnh</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="drop" href="pages/Tintuc.html">Tin tức</a>
-                    <ul>
-                        <li><a href="pages/Tintuc.html">Tin tức - Sự kiện</a></li>
-                        <li><a href="pages/Tintuc.html">Thông báo</a></li>
-                        <li><a href="#">Văn bản</a></li>
-                    </ul>
-                </li>
-                <li>
-                    @Html.ActionLink("Dao tao", "Index", "DaoTao")
-                    <ul>
-                        <li> @Html.ActionLink("Dao tao", "Index", "DaoTao")</li>
-                        <li><a href="#">chương trình đào tạo kỹ sư dân sự</a></li>
-                        <li>
-                            <a class="drop" href="#">Tin tức Đào tạo</a>
-                            <ul>
-                                <li><a href="#">Tin tức chung</a></li>
-                                <li><a href="#">Thông báo khen thưởng - kỷ luật</a></li>
-                                <li><a href="#">Thông báo lịch thi</a></li>
-                                <li><a href="#">Thông báo học phí</a></li>
-                                <li><a href="#">Thông báo lịch nghỉ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Đào tạo sau đại học</a></li>
-                        <li><a href="#">Cam kết đầu ra</a></li>
-                        <li><a href="#">Sổ tay sinh viên</a></li>
-                    </ul>
-                </li>
+                <li class="active">@Html.ActionLink("Trang Chủ", "Index", "Home")</li>
+                <li> <a class="drop" href="pages/Gioithieu.html">Giới thiệu</a> </li>
+                <li><a class="drop" href="pages/Tintuc.html">Tin tức</a></li>
+                <li> @Html.ActionLink("Đào Tạo", "Index", "DaoTao")    </li>
                 <li><a href="outpages/Tuyensinh/index.html">Tuyển sinh</a></li>
                 <li><a href="outpages/Sinhvien/index.html">Sinh viên</a></li>
-                <li><a href="pages/Nghiencuu.html">Nghiên cứu</a></li>
-                <li><a href="pages/Hoptac.html">Hợp tác</a></li>
+                <li>@Html.ActionLink("Nghiên Cứu", "Index", "NghienCuu")</li>
+                <li>@Html.ActionLink("Hợp Tác", "Index", "HopTac")</li>
             </ul>
             <!-- ################################################################################################ -->
         </nav>

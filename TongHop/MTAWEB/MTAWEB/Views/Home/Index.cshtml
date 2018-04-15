@@ -226,7 +226,7 @@
                         <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
                     </article>*@
 
-
+                   
                     <article class="one_third first">
                         <a href="#"><img class="btmspace-30" src="@lsNew[i].picture" alt=""></a>
                         <h6 class="nospace heading">@lsNew[i].name</h6>
@@ -237,18 +237,23 @@
                         <p>@lsNew[i].content&hellip;</p>
                         <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
                     </article>
+                    if (i + 1 < lsNew.Count)
+                    {
                     <article class="one_third">
-                        <a href="#"><img class="btmspace-30" src="@lsNew[i+1].picture" alt=""></a>
-                        <h6 class="nospace heading">@lsNew[i+1].name</h6>
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i + 1].picture" alt=""></a>
+                        <h6 class="nospace heading">@lsNew[i + 1].name</h6>
                         <ul class="nospace meta">
                             <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
                             <li><i class="fa fa-tag"></i> <a href="#">Tag Name</a></li>
                         </ul>
-                        <p>@lsNew[i+1].content&hellip;</p>
+                        <p>@lsNew[i + 1].content&hellip;</p>
                         <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
                     </article>
+                    }
+                    if (i + 2 < lsNew.Count)
+                    {
                     <article class="one_third">
-                        <a href="#"><img class="btmspace-30" src="@lsNew[i+2].picture"alt=""></a>
+                        <a href="#"><img class="btmspace-30" src="@lsNew[i + 2].picture"alt=""></a>
                         <h6 class="nospace heading">@lsNew[i + 2].name</h6>
                         <ul class="nospace meta">
                             <li><i class="fa fa-user"></i> <a href="#">Admin</a></li>
@@ -257,6 +262,7 @@
                         <p>@lsNew[i + 2].content&hellip;</p>
                         <footer class="nospace"><a class="btn" href="#">Read More</a></footer>
                     </article>
+                    }
                 }
             </div>
             <!-- ################################################################################################ -->

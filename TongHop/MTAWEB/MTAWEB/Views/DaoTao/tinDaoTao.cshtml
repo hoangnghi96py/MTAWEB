@@ -1,0 +1,128 @@
+﻿
+
+
+@using MTAWEB.Models.ENTITY
+@{
+    List<SUBCATEGOTY> lsSubCate = (List<SUBCATEGOTY>)ViewBag.lisSubCate;
+    List<NEWS> lsNew = (List<NEWS>)ViewBag.lisNew;
+}
+@{
+    ViewBag.Title = "getNewSub";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper bgded overlay" style="background-image:url('~/Content/image/backgrounds/01.png');">
+    <div id="breadcrumb" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <ul>
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="Daotao.html">Đào tạo</a></li>
+            <li><a href="#">Tin đào tạo</a></li>
+            <li><a href="#">Tin tức chung</a></li>
+        </ul>
+        <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div class="wrapper row3">
+        <main class="hoc container clear">
+            <!-- main body -->
+            <!-- ################################################################################################ -->
+            <div class="sidebar one_quarter first">
+                <!-- ################################################################################################ -->
+                <h6>Đào tạo</h6>
+                <nav class="sdb_holder">
+                    <ul>
+                        @foreach (SUBCATEGOTY item in lsSubCate)
+                        {
+                            <li>
+                                @*  @Html.ActionLink(@item.name, "getNewSub","DaoTao",new { id = @item.id },null)*@
+                                <a href="/DaoTao/tinDaoTao/@item.id">@item.name</a>
+                                @*<ul>
+                                        <li><a href="#">Tin tức chung</a></li>
+                                        <li><a href="#">Thông báo khen thưởng kỷ luật</a></li>
+                                        <li><a href="#">Thông báo lịch thi</a></li>
+                                        <li><a href="#">Thông báo học phí</a></li>
+                                        <li><a href="#">Thông báo lịch nghỉ</a></li>
+                                    </ul>*@
+                            </li>
+                        }
+                        
+                    </ul>
+
+                </nav>
+                <div class="sdb_holder">
+                    <h6>Thông tin bên lề</h6>
+                    <address>
+                        ...<br>
+                        ...<br>
+                        ...<br>
+                    </address>
+                </div>
+                <div class="sdb_holder">
+                    <h6>Thông tin bên lề</h6>
+                    <address>
+                        ...<br>
+                        ...<br>
+                        ...<br>
+                    </address>
+                </div>
+                <!-- ################################################################################################ -->
+            </div>
+            <!-- ################################################################################################ -->
+            <!-- ################################################################################################ -->
+            <div class="content three_quarter">
+                <!-- ################################################################################################ -->
+                <div id="comments">
+                    <h2>Tin tức</h2>
+                    <ul>
+                        @foreach (NEWS item in lsNew)
+                        {
+                            <li>
+                                <article>
+                                    <header>
+                                        <address>
+                                            <a href="#">@item.name</a>
+                                        </address>
+                                        <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> @item.dateup</time>
+                                    </header>
+                                    <div class="comcont">
+                                        <p>@item.content</p>
+                                    </div>
+                                    <footer class="nospace"><a class="btn" href="~/News/ChiTietNews/@item.id">Read More</a></footer>
+                                </article>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <!-- ################################################################################################ -->
+            </div>
+            <!-- ################################################################################################ -->
+            <!-- / main body -->
+            <div class="clear"></div>
+            <nav class="pagination">
+                <ul>
+                    <li><a href="#">&laquo; Previous</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><strong>&hellip;</strong></li>
+                    <li><a href="#">6</a></li>
+                    <li class="current"><strong>7</strong></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><strong>&hellip;</strong></li>
+                    <li><a href="#">14</a></li>
+                    <li><a href="#">15</a></li>
+                    <li><a href="#">Next &raquo;</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+
+

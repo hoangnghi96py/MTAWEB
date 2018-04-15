@@ -7,35 +7,27 @@ using System.Web.Mvc;
 
 namespace MTAWEB.Controllers
 {
-    public class DaoTaoController : Controller
+    public class NghienCuuController : Controller
     {
-        // GET: DaoTao
+        // GET: NghienCuu
         public ActionResult Index()
         {
+
             SubCategoryDAO subCateDao = new SubCategoryDAO();
-            ViewBag.lisSubCate = subCateDao.getSubCate(3);
+            ViewBag.lisSubCate = subCateDao.getSubCate(6);
             UnitCategoryDAO unitCateDao = new UnitCategoryDAO();
-          //  ViewBag.lisUnit = unitCateDao.getListUnitCate();
+            //  ViewBag.lisUnit = unitCateDao.getListUnitCate();
             return View();
         }
 
 
-        public ActionResult tinDaoTao(int id)
+        public ActionResult tinNghienCuu(int id)
         {
             SubCategoryDAO subCateDao = new SubCategoryDAO();
-            ViewBag.lisSubCate = subCateDao.getSubCate(3);
+            ViewBag.lisSubCate = subCateDao.getSubCate(6);
             newsDAO newdao = new newsDAO();
             ViewBag.lisNew = newdao.getListNewsSub(id);
             return View();
         }
-
-        // hien thi chi tiet tin tuc
-        public ActionResult ChiTietNew(int id)
-        {
-            newsDAO newdao = new newsDAO();
-            ViewBag.New = newdao.getNew(id);
-            return View();
-        }
-
     }
 }

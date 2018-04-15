@@ -36,7 +36,8 @@
                             @foreach (SUBCATEGOTY item in lsSubCate)
                             {
                                 <li>
-                                    <a href="DaoTao/">@item.name</a>
+                                  @*  @Html.ActionLink(@item.name, "getNewSub","DaoTao",new { id = @item.id },null)*@ 
+                                    <a href="/DaoTao/tinDaoTao/@item.id">@item.name</a>
                                     @*<ul>
                                         <li><a href="#">Tin tức chung</a></li>
                                         <li><a href="#">Thông báo khen thưởng kỷ luật</a></li>
@@ -46,7 +47,7 @@
                                     </ul>*@
                                 </li>
                             } 
-                           
+                           </ul>
                            
                     </nav>
                     <div class="sdb_holder">
